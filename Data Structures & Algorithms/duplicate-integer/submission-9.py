@@ -1,0 +1,12 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        if not nums:
+            return False
+        
+        seen = []
+
+        for _, val in enumerate(nums):
+            if (val in seen):
+                return True
+            seen.append(val)
+        return False
